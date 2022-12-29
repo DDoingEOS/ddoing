@@ -1,0 +1,10 @@
+#Thu Dec 29 16:52:17 KST 2022
+base.2=C\:\\develop\\git\\EOS\\front\\1\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+path.2=2/classes.dex
+base.1=C\:\\develop\\git\\EOS\\front\\1\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+path.1=0/classes.dex
+base.0=C\:\\develop\\git\\EOS\\front\\1\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex
