@@ -57,6 +57,6 @@
       app:layout_constraintHorizontal_bias="0.875"
       app:layout_constraintStart_toEndOf="@+id/homewview_now_date_name"
       app:layout_constraintTop_toTopOf="@+id/homeveiw_date_now"
-      app:layout_constraintVertical_bias="0.529" />
+      app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
