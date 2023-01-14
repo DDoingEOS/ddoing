@@ -13,4 +13,53 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="homeview_now_date_name">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:textStyle">
+            bold
+        </item>
+
+        <item name="android:textColor">
+            #0A5CEB
+        </item>
+
+    </style>
+
+    <style name="homeview_date_now_start">
+
+        <item name="android:textSize">
+            15sp
+        </item>
+
+        <item name="android:textStyle">
+            bold
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+
+    <style name="homeview_todays_date">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:textStyle">
+            bold
+        </item>
+
+        <item name="android:textColor">
+            #11927B
+        </item>
+
+    </style>
+
 </resources>
