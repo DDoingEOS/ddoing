@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:background="@drawable/work_done_bg"
+    android:elevation="20dp"
+    >
+
+    <TextView
+        android:id="@+id/work_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="헬스장 가기"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <TextView
+        android:id="@+id/work_achievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="성취도"
+        android:textColor="#828282"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/work_name" />
+
+    <RadioGroup
+        android:id="@+id/achievement_selection"
+        android:layout_width="268dp"
+        android:layout_height="48dp"
+        android:background="@drawable/work_done_achievement"
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/work_achievement"
+        app:layout_constraintVertical_bias="0.02">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+
+            android:text="😀" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🙂" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="😅" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🥲" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/share_place_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="내위치 공유하기"
+        android:textColor="#828282"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/workd_done_memo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/achievement_selection"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/workd_done_memo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="MEMO"
+        android:textColor="#828282"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53" />
+
+    <CheckBox
+        android:id="@+id/share_place"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:checked="true"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/share_place_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/share_place_text"
+        app:layout_constraintTop_toTopOf="@+id/share_place_text"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:layout_width="268dp"
+        android:layout_height="135dp"
+        android:background="@drawable/work_done_achievement"
+        android:elevation="5dp"
+        android:padding="12dp"
+        android:hint="메모입력란"
+        android:textSize="14sp"
+        android:gravity="top"
+        android:textColor="#757575"
+        android:textColorHint="#757575"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workd_done_memo"
+        app:layout_constraintVertical_bias="0.3"></EditText>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

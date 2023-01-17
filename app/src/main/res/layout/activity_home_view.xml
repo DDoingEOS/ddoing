@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <!-- 날짜 / 시간 -->
+
+
+    <!-- 🦆 icon "bell" -->
+
+    <!-- 🦆 icon "cog" -->
+    <!--    https://re-build.tistory.com/31 :float button 만드는 방법-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/float_button"
+        android:clickable="true"
+        android:contentDescription="일정 추가"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.90999997"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tabbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nowtime">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeview_date_now"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp">
+
+                <View
+                    android:id="@+id/homeveiw_date_now"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/homeview_date_now"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.466"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="88dp"
+                    android:layout_height="17dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@+id/homewview_now_date_name"
+                    app:layout_constraintEnd_toEndOf="@+id/homewview_now_date_name"
+                    app:layout_constraintStart_toStartOf="@+id/homewview_now_date_name"
+                    app:layout_constraintTop_toTopOf="@+id/homeveiw_date_now"
+                    app:layout_constraintVertical_bias="0.5"
+                    app:srcCompat="@drawable/homeview_now_date" />
+
+                <TextView
+                    android:id="@+id/homewview_now_date_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|top"
+                    android:text="헬스장가기"
+                    android:textAppearance="@style/homeview_now_date_name"
+                    app:layout_constraintBottom_toBottomOf="@+id/homeveiw_date_now"
+                    app:layout_constraintEnd_toEndOf="@+id/homeveiw_date_now"
+                    app:layout_constraintHorizontal_bias="0.108"
+                    app:layout_constraintStart_toStartOf="@+id/homeveiw_date_now"
+                    app:layout_constraintTop_toTopOf="@+id/homeveiw_date_now"
+                    app:layout_constraintVertical_bias="0.625" />
+
+                <TextView
+                    android:id="@+id/homeview_time_remain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1분 30초 전"
+                    android:textColor="#FF5520"
+                    android:textSize="14dp"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/homeveiw_date_now"
+                    app:layout_constraintEnd_toStartOf="@+id/homeview_date_now_start"
+                    app:layout_constraintHorizontal_bias="0.245"
+                    app:layout_constraintStart_toEndOf="@+id/homewview_now_date_name"
+                    app:layout_constraintTop_toTopOf="@+id/homeveiw_date_now"
+                    app:layout_constraintVertical_bias="0.654" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/homeview_date_now_start"
+                    android:layout_width="53.66dp"
+                    android:layout_height="52.51dp"
+                    android:background="@drawable/homeview_date_start_button2"
+                    android:text="시작"
+                    android:textAppearance="@style/homeview_date_now_start"
+                    app:layout_constraintBottom_toBottomOf="@+id/homeveiw_date_now"
+                    app:layout_constraintEnd_toEndOf="@+id/homeveiw_date_now"
+                    app:layout_constraintHorizontal_bias="0.838"
+                    app:layout_constraintStart_toEndOf="@+id/homewview_now_date_name"
+                    app:layout_constraintTop_toTopOf="@+id/homeveiw_date_now"
+                    app:layout_constraintVertical_bias="0.51" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="22dp"
+                android:background="@drawable/homeview_todays_date_bg"
+                android:elevation="5dp"
+                android:orientation="vertical"
+
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="87dp"
+                    android:layout_height="18dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintBottom_toTopOf="@id/homeview_todays_date"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.062"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/homeview_todays_date" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/homeview_todays_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/homeview_todays_date_item">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/homeview_todays_date_done_bg"
+                android:elevation="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="완료한 계획"
+                    android:textColor="#8B8686"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/homeview_todays_date_done"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/homeview_todays_date_done"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/homeview_todays_date_done_item" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nowtime"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/homeview_nowtime_layout"
+        app:layout_constraintBottom_toTopOf="@+id/scrollview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/homeview_now_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/notosans_lighte"
+            android:inputType="time"
+            android:scaleX="0.8"
+            android:text="22 : 18 : 09"
+            android:textSize="54sp"
+            app:layout_constraintBottom_toBottomOf="@+id/nowtime"
+            app:layout_constraintEnd_toEndOf="@+id/nowtime"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/nowtime"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.314" />
+
+        <TextView
+            android:id="@+id/editTextDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/notosans_lighte"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:text="2022.09.16"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.079"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.101" />
+
+        <TextView
+            android:id="@+id/homeview_now_work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="공부하기"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/homeview_date_progress_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.159"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeview_now_time"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/homeview_now_work_button"
+            android:layout_width="70dp"
+            android:layout_height="48dp"
+            android:background="@drawable/homeview_now_work_button"
+            android:text="완료"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            app:circularflow_radiusInDP="12dp"
+
+            app:layout_constraintBottom_toTopOf="@+id/homeview_date_progress_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.923"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ProgressBar
+            android:id="@+id/homeview_date_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:progress="75"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeview_now_time"
+            app:layout_constraintVertical_bias="0.741" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/homeview_now_work"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeview_now_time"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/icon_bell_"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:maxHeight="48dp"
+        android:maxWidth="48dp"
+        android:scaleType="fitCenter"
+        android:background="#00000000"
+        android:contentDescription="알림 버튼"
+        app:srcCompat="@drawable/homeview_icon_bell"
+        app:layout_constraintBottom_toBottomOf="@+id/nowtime"
+        app:layout_constraintEnd_toEndOf="@+id/nowtime"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toStartOf="@+id/nowtime"
+        app:layout_constraintTop_toTopOf="@+id/nowtime"
+        app:layout_constraintVertical_bias="0.084" />
+
+    <ImageButton
+        android:id="@+id/icon_cog_"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:maxHeight="48dp"
+        android:maxWidth="48dp"
+        android:scaleType="fitCenter"
+        android:layout_marginStart="8dp"
+        android:background="#00000000"
+        android:contentDescription="세팅 버튼"
+        android:src="@drawable/homeview_icon_setting"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_bell_"
+        app:layout_constraintStart_toEndOf="@+id/icon_bell_"
+        app:layout_constraintTop_toTopOf="@+id/icon_bell_" />
+
+    <!-- tabBar -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tabbar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/homeview_tabbar_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollview">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="62dp"
+            android:layout_height="50dp"
+            android:background="#00000000"
+            android:contentDescription="일정 버튼"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6"
+            app:srcCompat="@drawable/homeview_icon_calendar" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:background="#00000000"
+            android:contentDescription="홈 버튼"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6"
+            app:srcCompat="@drawable/homeview_icon_home_pressed" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:background="#00000000"
+            android:contentDescription="소셜 버튼"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6"
+            app:srcCompat="@drawable/homeview_icon_social" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
