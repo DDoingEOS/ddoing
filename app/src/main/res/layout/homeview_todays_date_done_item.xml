@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+  <View
+      android:id="@+id/homeveiw_date_now"
+      android:layout_width="match_parent"
+      android:layout_height="70dp"
+      android:background="#00000000"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.466"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <!-- @string/ach1 ,2,3,4 순서대로 표정 구성-->
+  <TextView
+      android:id="@+id/homewview_now_date_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal|top"
+      android:text="인공지능 복습"
+      android:textColor="#000000"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="@+id/homeveiw_date_now"
+      app:layout_constraintEnd_toEndOf="@+id/homeveiw_date_now"
+      app:layout_constraintHorizontal_bias="0.054"
+      app:layout_constraintStart_toStartOf="@+id/homeveiw_date_now"
+      app:layout_constraintTop_toTopOf="@+id/homeveiw_date_now"
+      app:layout_constraintVertical_bias="0.372" />
+
+  <TextView
+      android:id="@+id/homeview_time_remain"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="3dp"
+      android:text="20시 30분"
+      android:textColor="#757575"
+
+      android:textSize="14dp"
+      app:layout_constraintBottom_toBottomOf="@+id/homeveiw_date_now"
+      app:layout_constraintEnd_toEndOf="@+id/homewview_now_date_name"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/homewview_now_date_name"
+      app:layout_constraintTop_toBottomOf="@+id/homewview_now_date_name"
+      app:layout_constraintVertical_bias="0.375" />
+
+  <TextView
+      android:id="@+id/homeview_date_now_start"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/ach4"
+      android:textAppearance="@style/achievement"
+      app:layout_constraintBottom_toBottomOf="@+id/homeveiw_date_now"
+      app:layout_constraintEnd_toEndOf="@+id/homeveiw_date_now"
+      app:layout_constraintHorizontal_bias="0.875"
+      app:layout_constraintStart_toEndOf="@+id/homewview_now_date_name"
+      app:layout_constraintTop_toTopOf="@+id/homeveiw_date_now"
+      android:elevation="5dp"
+      app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
