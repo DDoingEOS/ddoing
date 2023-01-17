@@ -4,8 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/homeview"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:padding="20dp">
 
     <!-- 날짜 / 시간 -->
@@ -162,8 +162,7 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/homeview_todays_date_done"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
@@ -171,10 +170,41 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/homeview_todays_date_done_bg"
-                android:nestedScrollingEnabled="false"
-                android:overScrollMode="never"
-                tools:itemCount="3"
-                tools:listitem="@layout/homeview_todays_date_item" />
+                android:elevation="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="완료한 계획"
+                    android:textColor="#8B8686"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/homeview_todays_date_done"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/homeview_todays_date_done"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/homeview_todays_date_done_item" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         </LinearLayout>
 
@@ -191,7 +221,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
+        <TextView
             android:id="@+id/homeview_now_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -208,13 +238,14 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.314" />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
             android:fontFamily="@font/notosans_lighte"
             android:inputType="date"
+            android:minHeight="48dp"
             android:text="2022.09.16"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -243,11 +274,11 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/homeview_now_work_button"
             android:layout_width="70dp"
-            android:layout_height="24dp"
+            android:layout_height="48dp"
+            android:background="@drawable/homeview_now_work_button"
             android:text="완료"
             android:textColor="#ffffff"
             android:textStyle="bold"
-            android:background="@drawable/homeview_now_work_button"
             app:circularflow_radiusInDP="12dp"
 
             app:layout_constraintBottom_toTopOf="@+id/homeview_date_progress_bar"

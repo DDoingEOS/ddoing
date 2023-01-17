@@ -62,4 +62,10 @@
 
     </style>
 
+    <style name="achievement">
+        <item name="android:textSize">
+            45sp
+        </item>
+    </style>
+
 </resources>

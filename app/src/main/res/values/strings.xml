@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">DDOING</string>
+    <string name="ach1">😀</string>
+    <string name="ach2">🙂</string>
+    <string name="ach3">😅</string>
+    <string name="ach4">🥲</string>
 
 </resources>
