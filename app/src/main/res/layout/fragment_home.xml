@@ -253,7 +253,7 @@
             app:layout_constraintHorizontal_bias="0.079"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.101" />
+            app:layout_constraintVertical_bias="0.050000012" />
 
         <TextView
             android:id="@+id/homeview_now_work"
@@ -317,98 +317,34 @@
             app:layout_constraintTop_toBottomOf="@+id/homeview_now_time"
             app:layout_constraintVertical_bias="0.0" />
 
+        <ImageButton
+            android:id="@+id/icon_cog_"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="#00000000"
+            android:contentDescription="세팅 버튼"
+            android:maxWidth="48dp"
+            android:maxHeight="48dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/homeview_icon_setting"
+            tools:layout_editor_absoluteX="327dp"
+            tools:layout_editor_absoluteY="19dp" />
+
+        <ImageButton
+            android:id="@+id/icon_bell_"
+            android:layout_width="29dp"
+            android:layout_height="25dp"
+            android:background="#00000000"
+            android:contentDescription="알림 버튼"
+            android:maxWidth="48dp"
+            android:maxHeight="48dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/homeview_icon_bell"
+            tools:layout_editor_absoluteX="288dp"
+            tools:layout_editor_absoluteY="18dp" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageButton
-        android:id="@+id/icon_bell_"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:maxHeight="48dp"
-        android:maxWidth="48dp"
-        android:scaleType="fitCenter"
-        android:background="#00000000"
-        android:contentDescription="알림 버튼"
-        app:srcCompat="@drawable/homeview_icon_bell"
-        app:layout_constraintBottom_toBottomOf="@+id/nowtime"
-        app:layout_constraintEnd_toEndOf="@+id/nowtime"
-        app:layout_constraintHorizontal_bias="0.764"
-        app:layout_constraintStart_toStartOf="@+id/nowtime"
-        app:layout_constraintTop_toTopOf="@+id/nowtime"
-        app:layout_constraintVertical_bias="0.084" />
-
-    <ImageButton
-        android:id="@+id/icon_cog_"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:maxHeight="48dp"
-        android:maxWidth="48dp"
-        android:scaleType="fitCenter"
-        android:layout_marginStart="8dp"
-        android:background="#00000000"
-        android:contentDescription="세팅 버튼"
-        android:src="@drawable/homeview_icon_setting"
-        app:layout_constraintBottom_toBottomOf="@+id/icon_bell_"
-        app:layout_constraintStart_toEndOf="@+id/icon_bell_"
-        app:layout_constraintTop_toTopOf="@+id/icon_bell_" />
-
-    <!-- tabBar -->
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/tabbar"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:background="@drawable/homeview_tabbar_layout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scrollview">
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="62dp"
-            android:layout_height="50dp"
-            android:background="#00000000"
-            android:contentDescription="일정 버튼"
-            android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.14"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6"
-            app:srcCompat="@drawable/homeview_icon_calendar" />
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="48dp"
-            android:layout_height="50dp"
-            android:background="#00000000"
-            android:contentDescription="홈 버튼"
-            android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6"
-            app:srcCompat="@drawable/homeview_icon_home_pressed" />
-
-        <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="48dp"
-            android:layout_height="50dp"
-            android:background="#00000000"
-            android:contentDescription="소셜 버튼"
-            android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.85"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6"
-            app:srcCompat="@drawable/homeview_icon_social" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
