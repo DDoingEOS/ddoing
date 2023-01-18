@@ -1,4 +1,4 @@
-package com.eos.ddoing
+package com.example.ddoing
 
 import org.junit.Test
 
