@@ -1,4 +1,4 @@
-package com.example.ddoing.planAdd
+package com.example.ddoing.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

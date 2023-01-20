@@ -6,7 +6,6 @@ import android.os.Bundle
 import com.example.ddoing.MainActivity
 import com.example.ddoing.databinding.ActivityLoginBinding
 import com.example.ddoing.planAdd.PlanAdd
-import com.example.ddoing.planAdd.SignUp
 
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding

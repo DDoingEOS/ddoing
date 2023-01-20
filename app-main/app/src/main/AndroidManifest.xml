@@ -24,7 +24,7 @@
 
         </activity>
         <activity
-            android:name=".planAdd.SignUp"
+            android:name=".login.SignUp"
             android:exported="false" />
         <activity
             android:name=".planAdd.PlanAdd"
