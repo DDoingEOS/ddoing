@@ -4,105 +4,206 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context=".planAdd.PlanAdd">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="24dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:background="@drawable/work_done_bg"
+        android:elevation="20dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView7"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
             android:text="계획 추가"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="34dp" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="계획"
+            android:textColor="#828282"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/todoName"
+            app:layout_constraintEnd_toEndOf="@+id/todoName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/todoName" />
 
         <EditText
             android:id="@+id/todoName"
             android:layout_width="227dp"
-            android:layout_height="70dp"
+            android:layout_height="48dp"
+            android:background="@drawable/work_done_achievement"
+            android:elevation="5dp"
             android:ems="10"
+            android:gravity="top"
             android:hint="계획 이름"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColor="#757575"
+            android:textColorHint="#757575"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            app:layout_constraintVertical_bias="0.076" />
+
+        <!--        <TimePicker-->
+        <!--            android:layout_width="234dp"-->
+        <!--            android:layout_height="66dp"-->
+        <!--            android:timePickerMode="spinner"-->
+        <!--            app:layout_constraintVertical_chainStyle="packed"-->
+
+        <!--            tools:layout_editor_absoluteX="16dp"-->
+        <!--            tools:layout_editor_absoluteY="224dp" />-->
+
+        <!--버튼으로 해서 work_repeat이랑 연결시키면 좋을 것 같아요-->
 
         <EditText
             android:id="@+id/memo"
-            android:layout_width="267dp"
-            android:layout_height="59dp"
-            android:ems="10"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/work_done_achievement"
+            android:elevation="5dp"
+            android:gravity="top"
             android:hint="메모"
-            android:inputType="textEmailAddress" />
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColor="#757575"
+            android:textColorHint="#757575"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.847" />
 
         <CheckBox
             android:id="@+id/isRepeat"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="반복 - 미구현" />
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:text="반복 - 미구현"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayoutCompat"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/linearLayoutCompat"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+        <!--이것도 버튼으로 해서 15분 전 알림? 이런 기능 용으로 넣어도 될 것 같아요-->
 
         <CheckBox
             android:id="@+id/isAlert"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="알림" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="49dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:layout_width="103dp"
-                android:layout_height="wrap_content"
-                android:onClick="showTimePickerDialogStart"
-                android:text="시작시간" />
-
-            <Button
-                android:layout_width="102dp"
-                android:layout_height="wrap_content"
-                android:onClick="showTimePickerDialogEnd"
-                android:text="끝시간" />
-        </LinearLayout>
-
-        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_round"
-            android:backgroundTint="@color/white"
-            android:backgroundTintMode="add"
-            android:onClick="showDatePickerDialog"
-            android:text="날짜" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="31dp" />
+            android:text="알림"
+            app:layout_constraintBottom_toTopOf="@+id/memo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/planAddSubmit"
-            android:layout_width="135dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/button_round"
+            android:layout_width="123dp"
+            android:layout_height="48dp"
+            android:background="@drawable/homeview_now_work_button"
             android:lineSpacingExtra="16sp"
             android:text="확인"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            />
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/memo"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/memo"
+            app:layout_constraintTop_toBottomOf="@+id/memo" />
 
-    </LinearLayout>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/plan_add_button_layout"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/isAlert"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/todoName"
+            app:layout_constraintVertical_bias="0.13">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button1"
+                android:layout_width="98dp"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:onClick="showDatePickerDialog"
+                android:text="01/21 ▼"
+                android:textColor="#757575"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#595959" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:background="#00000000"
+                    android:onClick="showTimePickerDialogEnd"
+                    android:text="17:30 ▼"
+                    android:textColor="#757575" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#595959" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:background="#00000000"
+                    android:onClick="showTimePickerDialogEnd"
+                    android:text="18:30 ▼"
+                    android:textColor="#757575" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    https://www.youtube.com/watch?v=2k_PPpR7jII-->
