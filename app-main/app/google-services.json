@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "5689087092",
-    "project_id": "eos-ddoing",
-    "storage_bucket": "eos-ddoing.appspot.com"
+    "project_number": "858032472687",
+    "project_id": "ddoing-a79f4",
+    "storage_bucket": "ddoing-a79f4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:5689087092:android:388b0c866d501371c2ad21",
+        "mobilesdk_app_id": "1:858032472687:android:ad0aaede257d38c593839a",
         "android_client_info": {
-          "package_name": "com.eos.ddoing"
+          "package_name": "com.example.ddoing"
         }
       },
       "oauth_client": [
         {
-          "client_id": "5689087092-ubkog3aqjh47ktv14h3mro2ispbfmdgn.apps.googleusercontent.com",
+          "client_id": "858032472687-genispdj51qdp7s8ucb46sahd2i5e9cl.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.eos.ddoing",
+            "package_name": "com.example.ddoing",
             "certificate_hash": "1e04946b5825b3c73711e2beaad9e786cea22ee6"
           }
         },
         {
-          "client_id": "5689087092-0iokc8oj2buml3djoob3ahpr57abttaf.apps.googleusercontent.com",
+          "client_id": "858032472687-58kuk1snnpa124tvlnh3bd13lch4lj0p.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC18Z9BylAtTuLKyBUtW8culCPIe7t62Bc"
+          "current_key": "AIzaSyCRv8xtdJ1XFfrVD-AeeUhNTzcL9BuTkH0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "5689087092-0iokc8oj2buml3djoob3ahpr57abttaf.apps.googleusercontent.com",
+              "client_id": "858032472687-58kuk1snnpa124tvlnh3bd13lch4lj0p.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
