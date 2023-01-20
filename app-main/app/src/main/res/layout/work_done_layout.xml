@@ -65,28 +65,28 @@
                 android:layout_weight="1"
                 android:checked="true"
 
-                android:text="😀" />
+                android:text="@string/ach1" />
 
             <RadioButton
                 android:id="@+id/radioButton3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="🙂" />
+                android:text="@string/ach2" />
 
             <RadioButton
                 android:id="@+id/radioButton2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="😅" />
+                android:text="@string/ach3" />
 
             <RadioButton
                 android:id="@+id/radioButton4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="🥲" />
+                android:text="@string/ach4" />
 
         </RadioGroup>
 
