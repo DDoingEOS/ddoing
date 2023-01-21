@@ -11,9 +11,11 @@ import com.example.ddoing.databinding.RepeatFragmentBinding
 
 class RepeatFragment : Fragment() {
 
+// 혹시 팝업창 띄우는 것을 프래그먼트 말고, https://yj95.tistory.com/30 이런 느낌으로 팝업창으로 만드는 것은 어떤가요?
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         lateinit var binding: RepeatFragmentBinding
+
 
         var r1 : Int = 0
         var r2 : Int = 0
@@ -22,7 +24,8 @@ class RepeatFragment : Fragment() {
         var r5 : Int = 0
         var r6 : Int = 0
         var r7 : Int = 0
-
+        //https://roughroad.tistory.com/180
+        //이 링크 보면 똑같은 작업을 해서 id 명만 바꾸어서 사용하면  Repeat_Date.xml이랑 똑같을 것 같아요
         if(binding.checkBox1.isChecked()) {
             r1 = 1
         }

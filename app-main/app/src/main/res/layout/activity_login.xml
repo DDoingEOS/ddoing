@@ -4,35 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E1E9FF"
     tools:context=".LoginActivity">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/loginWithGoogle"
         android:layout_width="240dp"
         android:layout_height="65dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="234dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/button_round"
-        android:drawableStart="@drawable/rectangle_3"
+        android:drawableLeft="@drawable/rectangle_3"
         android:lineSpacingExtra="16sp"
+        android:paddingLeft="15dp"
         android:text="login with google"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.095" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="272dp"
-        android:layout_height="205dp"
+        android:layout_width="360dp"
+        android:layout_height="81dp"
+        android:layout_weight="0.5"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.321"
+        app:layout_constraintVertical_bias="0.40"
         app:srcCompat="@drawable/ddoing_logo" />
 
     <androidx.appcompat.widget.AppCompatButton

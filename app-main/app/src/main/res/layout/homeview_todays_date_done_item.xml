@@ -41,7 +41,7 @@
       android:text="20시 30분"
       android:textColor="#757575"
 
-      android:textSize="14dp"
+      android:textSize="14sp"
       app:layout_constraintBottom_toBottomOf="@+id/homeveiw_date_now"
       app:layout_constraintEnd_toEndOf="@+id/homewview_now_date_name"
       app:layout_constraintHorizontal_bias="0.0"
