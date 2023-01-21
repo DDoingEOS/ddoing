@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "858032472687",
+    "firebase_url": "https://ddoing-a79f4-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "ddoing-a79f4",
     "storage_bucket": "ddoing-a79f4.appspot.com"
   },
@@ -22,7 +23,7 @@
           }
         },
         {
-          "client_id": "858032472687-58kuk1snnpa124tvlnh3bd13lch4lj0p.apps.googleusercontent.com",
+          "client_id": "858032472687-fe652i4rbikubttobdi955g9bm04a517.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
