@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
@@ -110,9 +111,31 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val user = auth.currentUser
-                    val intentToMainActivity = Intent(this, MainActivity::class.java)
-                    startActivity(intentToMainActivity)
-                    finish()
+
+                    if (user != null) {
+                        FirebaseDatabase.getInstance().reference.child("users").child(user.uid).get().addOnSuccessListener {
+                            if(it.exists()) {
+                                Log.w(TAG, "기존 회원입니다.")
+                                Toast.makeText(this, "기존회원", Toast.LENGTH_SHORT).show()
+
+                                val intentToMainActivity = Intent(this, MainActivity::class.java)
+                                startActivity(intentToMainActivity)
+                                finish()
+                            } else {
+                                Log.w(TAG, "신규 회원입니다.")
+                                Toast.makeText(this, "회원가입", Toast.LENGTH_SHORT).show()
+
+                                val intentToSignUp = Intent(this, SignUp::class.java)
+                                startActivity(intentToSignUp)
+                                finish()
+                            }
+                        }.addOnFailureListener {
+                            Log.w(TAG, "error.")
+                            Toast.makeText(this, "error", Toast.LENGTH_SHORT).show()
+                        }
+                    } else {
+                        Toast.makeText(this, "엥", Toast.LENGTH_SHORT).show()
+                    }
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithCredential:failure", task.exception)
