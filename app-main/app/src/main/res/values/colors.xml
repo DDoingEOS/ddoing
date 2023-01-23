@@ -8,4 +8,16 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+<!--    캘린더 색깔   -->
+    <color name="ach1">#A6C161</color>
+    <color name="ach2">#84CDC1</color>
+    <color name="ach3">#F0B96E</color>
+    <color name="ach4">#F57E54</color>
+    <color name="ach5">#D95742</color>
+    <color name="nothing">#D4ECF6</color>
+
+<!--버튼 눌리면 바뀌는 버튼-->
+    <color name="friend_type_button">#9A9EFF</color>
+
+
 </resources>
