@@ -47,7 +47,7 @@ class RepeatFragment : Fragment() {
         if(binding.checkBox7.isChecked()) {
             r7 = 1
         }
-        binding.repeatSubmit.setOnClickListener{
+        binding.tableLayout.setOnClickListener{
             val planAddActivity = activity as PlanAdd
             planAddActivity.repeatReceiveData(r1, r2, r3, r4, r5, r6, r7)
         }
