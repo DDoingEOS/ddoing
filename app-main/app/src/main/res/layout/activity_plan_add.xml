@@ -132,6 +132,7 @@
             android:background="@drawable/homeview_now_work_button"
             android:lineSpacingExtra="16sp"
             android:text="확인"
+            android:gravity="center"
             android:textColor="#ffffff"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -158,6 +159,7 @@
                 android:layout_width="98dp"
                 android:layout_height="match_parent"
                 android:background="#00000000"
+                android:gravity="center"
                 android:onClick="showDatePickerDialog"
                 android:text="01/21 ▼"
                 android:textColor="#757575"
@@ -169,10 +171,10 @@
                 android:background="#595959" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                tools:layout_weight="1">
+                >
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button2"
@@ -181,6 +183,7 @@
                     android:background="#00000000"
                     android:onClick="showTimePickerDialogEnd"
                     android:text="17:30 ▼"
+                    android:gravity="center"
                     android:textColor="#757575" />
 
                 <View
@@ -195,6 +198,7 @@
                     android:background="#00000000"
                     android:onClick="showTimePickerDialogEnd"
                     android:text="18:30 ▼"
+                    android:gravity="center"
                     android:textColor="#757575" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 

@@ -24,7 +24,10 @@ class TimePickerFragment : DialogFragment(), TimePickerDialog.OnTimeSetListener 
         // Create a new instance of TimePickerDialog and return it
         // https://all-dev-kang.tistory.com/entry/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-timepickerdialog-spinner-%EB%AA%A8%EB%93%9C%EB%A1%9C-%EB%B3%80%EA%B2%BD%ED%95%98%EB%8A%94-%EB%B2%95
         // 위 링크를 통해서 timepicker sipnner 모드로 만들면 더 이쁠 것 같아요.
-        return TimePickerDialog(activity, android.R.style.Theme_Holo_Light_Dialog_NoActionBa,this, hour, minute, DateFormat.is24HourFormat(activity));
+        //return TimePickerDialog(activity, android.R.style.Theme_Holo_Light_Dialog_NoActionBa,this, hour, minute, DateFormat.is24HourFormat(activity));
+
+        return TimePickerDialog(activity,this, hour, minute, DateFormat.is24HourFormat(activity));
+
     }
 
     override fun onTimeSet(view: TimePicker, hourOfDay: Int, minute: Int) {

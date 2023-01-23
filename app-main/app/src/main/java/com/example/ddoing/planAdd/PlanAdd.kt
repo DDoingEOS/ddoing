@@ -53,6 +53,11 @@ class PlanAdd : AppCompatActivity() {
                 //백엔드로 보내는 함수 만들기
             }
         }
+//        binding.button1.setOnClickListener{
+//            if(binding.button1.isPressed == true) {
+//                showDatePickerDialog()
+//            }
+//        }
 
         //알림 설정
         binding.isAlert.setOnClickListener {
