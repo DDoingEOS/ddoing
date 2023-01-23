@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ddoing"
         tools:targetApi="31">
+
         <activity
             android:name=".login.LoginActivity"
             android:exported="true"
@@ -21,18 +22,19 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".login.SignUp"
             android:exported="false" />
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".planAdd.PlanAdd"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".planAdd.RepeatActivity"
             android:exported="false" />
-
     </application>
 
 </manifest>
