@@ -106,7 +106,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="5dp"
-            android:text="반복 - 미구현"
+            android:text="반복"
             app:layout_constraintEnd_toEndOf="@+id/linearLayoutCompat"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/linearLayoutCompat"
@@ -155,8 +155,8 @@
             app:layout_constraintVertical_bias="0.13">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button1"
-                android:layout_width="98dp"
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#00000000"
                 android:gravity="center"
@@ -177,13 +177,13 @@
                 >
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button2"
+                    android:id="@+id/timeStart"
                     android:layout_width="match_parent"
                     android:layout_height="49dp"
                     android:background="#00000000"
-                    android:onClick="showTimePickerDialogEnd"
-                    android:text="17:30 ▼"
                     android:gravity="center"
+                    android:onClick="showTimePickerDialogStart"
+                    android:text="17:30 ▼"
                     android:textColor="#757575" />
 
                 <View
@@ -192,13 +192,13 @@
                     android:background="#595959" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button3"
+                    android:id="@+id/timeEnd"
                     android:layout_width="match_parent"
                     android:layout_height="49dp"
                     android:background="#00000000"
+                    android:gravity="center"
                     android:onClick="showTimePickerDialogEnd"
                     android:text="18:30 ▼"
-                    android:gravity="center"
                     android:textColor="#757575" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -206,6 +206,17 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

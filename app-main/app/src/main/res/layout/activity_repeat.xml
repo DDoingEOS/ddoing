@@ -41,7 +41,7 @@
                     android:layout_marginTop="1dp"
                     android:layout_weight="1"
                     android:background="#ffffff"
-                    android:checked="true"
+                    android:checked="false"
                     android:padding="3dp"
                     android:text="매주 월요일"
                     android:textStyle="bold" />
@@ -75,7 +75,7 @@
                     android:layout_marginTop="1dp"
                     android:layout_weight="1"
                     android:background="#ffffff"
-                    android:checked="true"
+                    android:checked="false"
                     android:padding="3dp"
                     android:text="매주 수요일"
                     android:textStyle="bold" />
@@ -108,7 +108,7 @@
                     android:layout_marginTop="1dp"
                     android:layout_weight="1"
                     android:background="#ffffff"
-                    android:checked="true"
+                    android:checked="false"
                     android:padding="3dp"
                     android:text="매주 금요일"
                     android:textStyle="bold" />
@@ -183,96 +183,3 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent">-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_marginStart="32dp"-->
-<!--        android:layout_marginTop="32dp"-->
-<!--        android:layout_marginEnd="32dp"-->
-<!--        android:layout_marginBottom="32dp"-->
-<!--        android:orientation="vertical"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent">-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:text="매주 반복할 요일 체크"-->
-<!--            android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
-<!--            android:textStyle="bold" />-->
-
-<!--        <Space-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="42dp" />-->
-
-<!--        -->
-
-<!--        <CheckBox-->
-<!--            android:id="@+id/checkBox2"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="화요일" />-->
-
-<!--        <CheckBox-->
-<!--            android:id="@+id/checkBox3"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="수요일" />-->
-
-<!--        <CheckBox-->
-<!--            android:id="@+id/checkBox4"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="목요일" />-->
-
-<!--        <CheckBox-->
-<!--            android:id="@+id/checkBox5"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="금요일" />-->
-
-<!--        <CheckBox-->
-<!--            android:id="@+id/checkBox6"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="토요일" />-->
-
-<!--        <CheckBox-->
-<!--            android:id="@+id/checkBox7"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="일요일" />-->
-
-<!--        <Space-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="42dp" />-->
-
-<!--        <androidx.appcompat.widget.AppCompatButton-->
-<!--            android:id="@+id/repeatSubmit"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="12dp"-->
-<!--            android:layout_marginBottom="16dp"-->
-<!--            android:background="@drawable/button_round"-->
-<!--            android:drawableStart="@drawable/button_round"-->
-<!--            android:lineSpacingExtra="16sp"-->
-<!--            android:text="확인"-->
-<!--            android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
-<!--            app:layout_constraintBottom_toTopOf="@+id/signUp"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.497"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/loginWithGoogle"-->
-<!--            app:layout_constraintVertical_bias="0.466" />-->
-<!--    </LinearLayout>-->
-<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
