@@ -1,5 +1,6 @@
 package com.example.ddoing
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ddoing.R
 import com.example.ddoing.databinding.FragmentHomeBinding
+import com.example.ddoing.planAdd.PlanAdd
 
 /**
  * 홈페이지
@@ -32,23 +34,21 @@ class HomeFragment : Fragment() {
         return view
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.btm_nav_menu, menu)
-
-        val calenderButton = menu.findItem(R.id.switch_calender)
-        val socialButton = menu.findItem(R.id.switch_social)
-    }
-
     private fun chooseLayout() {
-
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = TodaysDateAdapter()
 
     }
 
     override fun onViewCreated(view: View, savedInstaceState: Bundle?) {
-        //recyclerView = binding.recyclerView
+        recyclerView = binding.homeviewTodaysDate
         chooseLayout()
+        // 계획추가 버튼
+        binding.floatingActionButton.setOnClickListener{
+            val intent = Intent(context, PlanAdd::class.java)
+            context?.startActivity(intent)
+        }
+
     }
 
     override fun onDestroyView() {

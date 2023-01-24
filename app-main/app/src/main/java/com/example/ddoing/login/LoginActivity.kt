@@ -57,11 +57,11 @@ class LoginActivity : AppCompatActivity() {
             startActivity(nextIntent)
         }
 
-        //계획추가
+        /*
         binding.login.setOnClickListener {
             val nextIntent = Intent(this, PlanAdd::class.java)
             startActivity(nextIntent)
-        }
+        }*/
     }
 
     private fun signIn() {
