@@ -9,6 +9,7 @@ import com.example.ddoing.MainActivity
 import com.example.ddoing.R
 import com.example.ddoing.databinding.ActivityLoginBinding
 import com.example.ddoing.planAdd.PlanAdd
+import com.example.ddoing.planDone.PlanDoneActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -51,15 +52,22 @@ class LoginActivity : AppCompatActivity() {
             signIn()
         }
 
-        //회원가입
-        binding.signUp.setOnClickListener {
-            val nextIntent = Intent(this, SignUp::class.java)
-            startActivity(nextIntent)
-        }
 
         //계획추가
         binding.login.setOnClickListener {
             val nextIntent = Intent(this, PlanAdd::class.java)
+            startActivity(nextIntent)
+        }
+
+        //계획완료
+        binding.planDone.setOnClickListener {
+            val nextIntent = Intent(this, PlanDoneActivity::class.java)
+            startActivity(nextIntent)
+        }
+
+        //계획 완료
+        binding.main.setOnClickListener {
+            val nextIntent = Intent(this, MainActivity::class.java)
             startActivity(nextIntent)
         }
     }

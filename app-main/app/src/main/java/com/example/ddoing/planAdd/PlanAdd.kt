@@ -53,7 +53,10 @@ class PlanAdd : AppCompatActivity() {
             SetVariable()
 
             if (checkAllInput()) {
+
                 //백엔드로 보내는 함수 만들기
+                BackEnd()
+
                 Toast.makeText(this, "계획 추가 성공", Toast.LENGTH_SHORT).show()
                 finish()
             }
@@ -72,6 +75,9 @@ class PlanAdd : AppCompatActivity() {
             }
         }
 
+    }
+
+    fun BackEnd() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

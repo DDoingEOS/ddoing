@@ -21,7 +21,7 @@ class RepeatActivity : AppCompatActivity() {
         var r6 : Int = 0
         var r7 : Int = 0
 
-        binding.workDoneButton.setOnClickListener{
+        binding.planDoneButton.setOnClickListener{
             if(binding.checkBox1.isChecked()) {
                 r1 = 1
             }

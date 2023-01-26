@@ -20,6 +20,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.0" />
@@ -49,7 +50,7 @@
         android:lineSpacingExtra="16sp"
         android:text="계획 추가"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toTopOf="@+id/signUp"
+        app:layout_constraintBottom_toTopOf="@+id/planDone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,14 +58,29 @@
         app:layout_constraintVertical_bias="0.466" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/signUp"
+        android:id="@+id/main"
+        android:layout_width="240dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_round"
+        android:drawableStart="@drawable/button_round"
+        android:lineSpacingExtra="16sp"
+        android:text="홈 화면"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/planDone"
         android:layout_width="240dp"
         android:layout_height="65dp"
         android:layout_marginBottom="44dp"
         android:background="@drawable/button_round"
         android:drawableStart="@drawable/button_round"
         android:lineSpacingExtra="16sp"
-        android:text="회원가입"
+        android:text="계획 완료"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -151,7 +151,7 @@
         </TableLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/work_done_button"
+            android:id="@+id/plan_done_button"
             android:layout_width="87dp"
             android:layout_height="48dp"
             android:background="@drawable/homeview_now_work_button"
