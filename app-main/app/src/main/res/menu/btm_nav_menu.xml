@@ -4,23 +4,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/switch_calender"
-        android:enabled="true"
         android:icon="@drawable/homeview_icon_calendar"
-        android:title="Calender"
-        app:showAsAction="always"/>
+        android:contentDescription="Calender"
+        android:title="Calender"/>
 
     <item
         android:id="@+id/switch_home"
-        android:enabled="true"
         android:icon="@drawable/homeview_icon_home"
-        android:title="Home"
-        app:showAsAction="always"/>
+        android:contentDescription="Home"
+        android:title="Home"/>
 
     <item
         android:id="@+id/switch_social"
-        android:enabled="true"
         android:icon="@drawable/homeview_icon_social"
-        android:title="Social"
-        app:showAsAction="always"/>
+        android:contentDescription="Social"
+        android:title="Social"/>
 
 </menu>
